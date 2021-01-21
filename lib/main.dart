@@ -1,5 +1,6 @@
 import 'package:covid19_blue_app_ui/constants.dart';
 import 'package:covid19_blue_app_ui/screens/home/home_screen.dart';
+import 'package:covid19_blue_app_ui/screens/info/info_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
           scaffoldBackgroundColor: kBackgroundColor,
           fontFamily: "Poppins",
           textTheme: TextTheme(body1: TextStyle(color: kBodyTextColor))),
-      home: HomeScreen(),
+      home: InfoScreen(),
     );
   }
 }
