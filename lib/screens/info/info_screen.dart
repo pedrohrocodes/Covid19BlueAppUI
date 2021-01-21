@@ -1,4 +1,5 @@
 import 'package:covid19_blue_app_ui/constants.dart';
+import 'package:covid19_blue_app_ui/screens/info/widgets/prevent_card.dart';
 import 'package:covid19_blue_app_ui/screens/info/widgets/symptom_card.dart';
 import 'package:covid19_blue_app_ui/widgets/my_header.dart';
 import 'package:flutter/material.dart';
@@ -61,8 +62,47 @@ class _InfoScreenState extends State<InfoScreen> {
                     scrollDirection: Axis.horizontal,
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [SymptomCard()],
+                      children: [
+                        SymptomCard(
+                          image: "assets/images/headache.png",
+                          title: "Headache",
+                          isActive: true,
+                        ),
+                        SymptomCard(
+                          image: "assets/images/caugh.png",
+                          title: "Caugh",
+                          isActive: false,
+                        ),
+                        SymptomCard(
+                          image: "assets/images/fever.png",
+                          title: "Fever",
+                          isActive: false,
+                        ),
+                      ],
                     ),
+                  ),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  Text(
+                    "Prevention",
+                    style: kTitleTextStyle,
+                  ),
+                  SizedBox(height: 20),
+                  PreventCard(
+                    text:
+                        "Since the start of the coronavirus outbreak some places have fully embraced wearing facemasks",
+                    image: "assets/images/wear_mask.png",
+                    title: "Wear face mask",
+                  ),
+                  PreventCard(
+                    text:
+                        "Since the start of the coronavirus outbreak some places have fully embraced wearing facemasks",
+                    image: "assets/images/wash_hands.png",
+                    title: "Wash your hands",
+                  ),
+                  SizedBox(
+                    height: 50,
                   )
                 ],
               ),
