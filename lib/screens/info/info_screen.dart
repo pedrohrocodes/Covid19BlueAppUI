@@ -1,3 +1,5 @@
+import 'package:covid19_blue_app_ui/constants.dart';
+import 'package:covid19_blue_app_ui/screens/info/widgets/symptom_card.dart';
 import 'package:covid19_blue_app_ui/widgets/my_header.dart';
 import 'package:flutter/material.dart';
 
@@ -42,7 +44,29 @@ class _InfoScreenState extends State<InfoScreen> {
                 image: "assets/icons/coronadr.svg",
                 textTop: "Get to know",
                 textBottom: "About Covid-19",
-                offset: offset)
+                offset: offset),
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 20),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    "Symptoms",
+                    style: kTitleTextStyle,
+                  ),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [SymptomCard()],
+                    ),
+                  )
+                ],
+              ),
+            )
           ],
         ),
       ),
